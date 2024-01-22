@@ -52,7 +52,7 @@ docker run hello-world
 ![docker-run-hello-world](images/docker-run-hello-world.png)
 - If you follow the walkthrough instructions on "Docker Desktop" to create the first container, you will select `8088:80`⁠ in the Port(s) column to see it running.
 ![docker-first-container-1](images/docker-first-container-1.png)
-- You'll see the message at port `8088:80`on the browser as below.
+- You'll see the message at port `localhost:8088:80`on the browser as below.
 ![docker-first-container-2](images/docker-first-container-2.png)
 
 

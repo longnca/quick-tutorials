@@ -52,7 +52,7 @@ docker run hello-world
 ![docker-run-hello-world](images/docker-run-hello-world.png)
 - If you follow the walkthrough instructions on "Docker Desktop" to create the first container, you will select `8088:80`⁠ in the Port(s) column to see it running.
 ![docker-first-container-1](images/docker-first-container-1.png)
-- You'll see the message at port `localhost:8088:80`on the browser as below.
+- You'll see the message at port `http://localhost:8088:80`on the browser as below.
 ![docker-first-container-2](images/docker-first-container-2.png)
 
 
@@ -77,3 +77,51 @@ docker run hello-world
 - Use **Docker Volumes** for persistent data storage.
 - Be aware of the differences between Linux and Windows containers, especially if you are developing cross-platform applications.
 - Utilize **Docker Compose** for managing multi-container applications.
+
+## How to run a container from a single image:
+
+**Credit:** Docker Desktop's walkthrough instruction. 
+
+In this guide, you create an image using a Dockerfile and a sample application.
+
+### Get the sameple applicaiton:
+
+- Clone the repository at https://github.com/docker/welcome-to-docker⁠.
+```bash
+git clone https://github.com/docker/welcome-to-docker
+```
+- Run the following command before moving on.
+```bash
+cd welcome-to-docker
+```
+
+### Verify your Dockerfile:
+
+- Open the sample application in your IDE (e.g. VS Code). Note that it already has a Dockerfile. For your own projects you need to create this yourself.
+![dockerfile](images/dockerfile.png)
+
+### Build your first image:
+
+- You can build an image using the following docker build command via a CLI in your project folder.
+
+```bash
+docker build -t welcome-to-docker .
+```
+Explain the command: The `-t` flag tags your image with a name. (welcome-to-docker in this case). And the `.` (dot) lets Docker know where it can find the Dockerfile.
+
+### Run your container:
+
+- Once the build is complete, an image will appear in the **Images** tab in Docker Desktop.
+![dockerfile-in-images](images/dockerfile-in-images.png)
+
+- Select the image name to see its details. Select **Run** to run it as a container. In the Optional settings remember to specify a port number (something like `8089`).
+![run-optional-settings](images/run-optional-settings.png)
+
+### View the frontend:
+
+- You now have a running container. 
+- If you don't have a name for your container, Docker provides one. View your container live by selecting the link below the container's name.
+![run-front-end](images/run-front-end.png)
+- You'll see the message at port `http://localhost:8089/`on the browser as below.
+![docker-first-container-2](images/docker-first-container-2.png)
+

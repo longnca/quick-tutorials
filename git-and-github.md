@@ -6,6 +6,7 @@
 
 - If you haven't already, the first thing you need to do is install Git on your computer.
 - You can download Git for your specific operating system from the official website: https://git-scm.com/downloads. Follow the installation instructions for your platform.
+![Git installation website](images/git-install.png)
 
 ### Step 2: Configure Git:
 

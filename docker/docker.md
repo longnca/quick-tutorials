@@ -1,5 +1,14 @@
 # Introduction to Docker
 
+## Table of Contents:
+1. [References](#references)
+1. [Step-by-step Installation](#step-by-step-installation)
+1. [Using Docker on Windows](#using-docker-on-windows)
+1. [Best practices for using Docker on Windows](#best-practices-for-using-docker-on-windows)
+1. [How to run a container from a single image](#how-to-run-a-container-from-a-single-image)
+1. [Multi-container applications](#multi-container-applications)
+
+
 ## References:
 
 Some good resources to learn more about Docker:
@@ -58,27 +67,27 @@ docker run hello-world
 
 **Congratulations!** Now you have Docker installed and running on your Windows machine. You can start using it to containerize applications, including databases, data processing tools, and more.
 
-## Using Docker on Windows:
+## Using Docker on Windows
 
 - **Docker CLI**: Use Docker commands in your terminal to pull images, run containers, and manage Docker.
 - **Docker Compose**: Docker Desktop includes Docker Compose for defining and running multi-container Docker applications.
 - **Docker Desktop Dashboard**: Provides a simple interface to manage your containers, images, networks, and volumes.
 
-## Basic Docker Commands
+## Basic Docker commands
 - `docker pull [image]`: Pulls an image from Docker Hub.
 - `docker run [image]`: Runs a container from an image.
 - `docker ps`: Lists running containers.
 - `docker images`: Lists images that are locally stored with the Docker engine.
 - `docker stop [container-id]`: Stops a running container.
 
-## Best Practices for Using Docker on Windows
+## Best practices for using Docker on Windows
 
 - Regularly update Docker to the latest version to get new features, bug fixes, and security patches.
 - Use **Docker Volumes** for persistent data storage.
 - Be aware of the differences between Linux and Windows containers, especially if you are developing cross-platform applications.
 - Utilize **Docker Compose** for managing multi-container applications.
 
-## How to run a container from a single image:
+## How to run a container from a single image
 
 **Credit:** Everything in this section is pasted from Docker Desktop's walkthrough instruction. All the screenshots are mine.
 
@@ -125,7 +134,7 @@ Explain the command: The `-t` flag tags your image with a name. (welcome-to-dock
 - You'll see the message at port `http://localhost:8089/`on the browser as below.
 ![docker-first-container-2](images/docker-first-container-2.png)
 
-## Multi-container applications:
+## Multi-container applications
 
 **Credit:** Everything in this section is pasted from Docker Desktop's walkthrough instruction. All the screenshots are mine.
 

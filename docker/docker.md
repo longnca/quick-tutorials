@@ -125,3 +125,64 @@ Explain the command: The `-t` flag tags your image with a name. (welcome-to-dock
 - You'll see the message at port `http://localhost:8089/`on the browser as below.
 ![docker-first-container-2](images/docker-first-container-2.png)
 
+## Multi-container applications:
+
+Credit: Everything in this section is pasted from Docker Desktop's walkthrough instruction.
+
+### Introducing Docker Compose:
+
+- You already know how to start each container individually. 
+- Imagine how great it would be if a tool could start multiple containers with a single command. That tool is Docker Compose.
+
+### Get the sample app:
+
+- Clone the repository at https://github.com/docker/multi-container-app⁠.
+```bash
+git clone https://github.com/docker/multi-container-app
+```
+
+### Understanding the sample:
+
+- This is a simple todo application built using ExpressJS and Node. All todos are saved in a MongoDB database.
+![multi-container-1](images/multi-container-1.png)
+
+### `compose.yaml`:
+
+- If you view the code of the sample application, you will notice that it has a `compose.yaml` file. 
+- This file tells Docker how to run your application. Open the `compose.yaml` file in a text editor to explore the instructions.
+![compose-yaml](images/compose-yaml.png)
+
+### Running the application:
+
+- We are going to run this application with the docker compose up command in your project directory. This command builds and runs all the services listed in the compose file.
+```bash
+docker compose up -d
+```
+- Explain the command: The `-d` flag tells docker compose to run in detached mode.
+![docker-compose-up-d](images/docker-compose-up-d.png)
+
+### View the frontend:
+
+- In Docker Desktop, you should now have two containers running (the `todo-app`, and `todo-database`). To view the frontend, expand the app stack in Containers and select the link to `localhost:3000`⁠.
+![multi-container-2](images/multi-container-2.png)
+- Add some tasks in the frontend, and then open the app in a new tab. Notice that the tasks are still visible.
+![multi-container-3](images/multi-container-3.png)
+
+### Develop in your containers
+
+- When developing with Docker, you may need to automatically update and preview your running services as you edit and save your code. We use docker compose watch for this.
+- Run the following command to run your project with compose watch.
+```bash
+docker compose watch
+```
+- Now change the text in line 18 of the app `app/views/todos.ejs` to see your changes *in real time*.
+- Read more about how to set this up in your own applications via the compose watch documentation⁠.
+- Stop watch mode: You can stop watch with `Ctrl + C` shortcut.
+
+### Delete everything and restart:
+
+- Having your configuration stored in a Compose file has another advantage, you can easily delete everything and restart.
+- Simply select the app stack, and then select `Delete` on Docker Desktop. 
+![multi-container-delete](images/multi-container-delete.png)
+- When you want to restart, run `docker compose up` in the project folder again. This will restart your application again. 
+- Note that when the db container is deleted, any todos created are also lost.

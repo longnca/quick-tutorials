@@ -4,6 +4,7 @@
 1. [References](#references)
 1. [Step-by-step Installation](#step-by-step-installation)
 1. [Using Docker on Windows](#using-docker-on-windows)
+1. [Basic Docker commands](#basic-docker-commands)
 1. [Best practices for using Docker on Windows](#best-practices-for-using-docker-on-windows)
 1. [How to run a container from a single image](#how-to-run-a-container-from-a-single-image)
 1. [Multi-container applications](#multi-container-applications)

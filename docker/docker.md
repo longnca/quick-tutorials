@@ -180,13 +180,13 @@ docker compose up -d
 
 ### Develop in your containers
 
-- When developing with Docker, you may need to automatically update and preview your running services as you edit and save your code. We use docker compose watch for this.
+- When developing with Docker, you may need to automatically update and preview your running services as you edit and save your code. We use `docker compose watch` for this.
 - Run the following command to run your project with compose watch.
 ```bash
 docker compose watch
 ```
 - Now change the text in line 18 of the app `app/views/todos.ejs` to see your changes *in real time*.
-- Read more about how to set this up in your own applications via the compose watch documentation⁠.
+- Read more about how to set this up in your own applications via the [compose watch documentation](https://docs.docker.com/compose/file-watch/).
 - Stop watch mode: You can stop watch with `Ctrl + C` shortcut.
 
 ### Delete everything and restart:

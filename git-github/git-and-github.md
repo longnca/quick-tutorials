@@ -1,6 +1,12 @@
 # How to start using Git & GitHub
 
-## 1. Installing and configuring Git: 
+## Table of Contents:
+1. [Installing and configuring Git](#installing-and-configuring-git)
+1. [Creating a local repo and initializing Git](#creating-a-local-repo-and-initializing-git)
+1. [Push the local changes to GitHub repo](#push-the-local-changes-to-github-repo)
+1. [Troubleshooting](#troubleshooting)
+
+## Installing and configuring Git
 
 ### Step 1: Install Git:
 
@@ -18,7 +24,7 @@ git config --global user.name "your-github-username"
 git config --global user.email "your-github-email@example.com"
 ```
 
-## 2. Creating a local repo and initializing Git:
+## Creating a local repo and initializing Git
 
 ### Step 1: Create a local repo:
 - Now, let's create a new local directory where you want to store your project files. 
@@ -65,7 +71,7 @@ git commit -m "Initial commit"
 ```
 - Replace "`Initial commit`" with a meaningful message that describes what you did in this commit.
 
-## 3. Push the local changes to GitHub repo:
+## Push the local changes to GitHub repo
 
 ### Step 1: Create a GitHub Repository
 
@@ -87,10 +93,10 @@ git push -u origin main
 
 Now, if you visit your GitHub repository in your web browser, you should see the files and folders you added from your local directory.
 
-## Congratulations! 
+### Congratulations! 
 You've created a local Git repository, added files, and pushed them to GitHub. 
 
-## Troubleshotting:
+## Troubleshooting
 
 ### Error: `error: src refspec main does not match any`. 
 

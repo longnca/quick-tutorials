@@ -9,7 +9,7 @@
 1. [Multi-container applications](#multi-container-applications)
 
 
-## References:
+## References
 
 Some good resources to learn more about Docker:
 - [Docker Official Documentation](https://docs.docker.com/guides/get-started/).

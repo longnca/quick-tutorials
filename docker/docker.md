@@ -80,7 +80,7 @@ docker run hello-world
 
 ## How to run a container from a single image:
 
-**Credit:** Docker Desktop's walkthrough instruction. 
+**Credit:** Everything in this section is pasted from Docker Desktop's walkthrough instruction. All the screenshots are mine.
 
 In this guide, you create an image using a Dockerfile and a sample application.
 
@@ -127,7 +127,7 @@ Explain the command: The `-t` flag tags your image with a name. (welcome-to-dock
 
 ## Multi-container applications:
 
-Credit: Everything in this section is pasted from Docker Desktop's walkthrough instruction.
+**Credit:** Everything in this section is pasted from Docker Desktop's walkthrough instruction. All the screenshots are mine.
 
 ### Introducing Docker Compose:
 

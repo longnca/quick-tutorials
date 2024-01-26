@@ -4,26 +4,26 @@
 
 ### Useful Extensions
 
-#### Python Extension Pack
+#### 1. Python Extension Pack
 
 - Author: Don Jayahmanne.
 - Why it's good: Includes installations of 7 useful individual extensions such as: autoDocstring, ItelliCode, Python, Python Indent, Python Environment Manager, Django, Jinja.
 
-#### Pylance
+#### 2. Pylance
 
 - Author: Microsoft.
 - Why it's good: "Supercharge your Python IntelliSense experience with rich type information, helping you write better code faster" (from its introduction).
 
-#### Jupyter
+#### 3. Jupyter
 
 - No need to say more about this!
 
-#### CodeSnap
+#### 4. CodeSnap
 
 - Author: adpyke.
 - Why it's good: "Take beautiful screenshots of your code in VS Code!"
 
-#### Path Intellisense
+#### 5. Path Intellisense
 
 - Author: Christian Kohler.
 - Why it's good: Helps to autocomplete filenames.

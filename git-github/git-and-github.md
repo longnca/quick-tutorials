@@ -7,6 +7,7 @@
 1. [Push the local changes to GitHub repo](#push-the-local-changes-to-github-repo)
 1. [Other Tips and Resources](#other-tips-and-resources)
 1. [Troubleshooting](#troubleshooting)
+1. [Acknowledgements](#acknowledgements)
 
 ## Installing and configuring Git
 
@@ -171,3 +172,7 @@ If your terminal starts to get too cluttered with a long list of commands and re
 1. Use the correct branch name: `git push -u origin master`. Replace "`master`" with the actual branch name you're working on.
 1. Rename your branch (optional): If you intended to use the "`main`" branch and you're not currently on it, you can rename your current branch to "`main`" if that aligns with your project's naming conventions. For example, to rename the current branch to "`main`," you would use: `git branch -m main`. Then, you can use the `git push -u origin main` command to push to the "main" branch on GitHub.
 1. Restart the command line editor and then test pushing commits to GitHub. Refresh the GitHub website to verify. 
+
+## Acknowledgements
+
+- Book: **GitHub for Dummies 2nd edition** by Sarah Guthals, PhD.

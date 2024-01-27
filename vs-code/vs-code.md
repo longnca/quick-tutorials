@@ -28,11 +28,50 @@
 - Author: Christian Kohler.
 - Why it's good: Helps to autocomplete filenames.
 
+### Other Extensions
+
+#### 1. Markdown Preview GitHub Styling
+
+- Author: Matt Bierner
+- See how the Markdown (.md) file will look like on GitHub.
+
 ### VS Code Settings
 
-#### Jupyter - Interactive Window
+#### 1. Jupyter - Interactive Window
 
 - In `Settings > Users`, search for Jupter Interactive Window as the screenshot.
 ![vscode-jupyter-interactive](vscode-jupyter-interactive.png)
 - Select: `When pressing shift+enter, send selected code in a Python file to the Jupyter interactive window as opposed to the Python terminal.`
 - Purpose: To send selected code in Python to Jupyter Notebook.
+
+#### 2. Setting the Line Length Indicator
+
+- Go to "`Settings`" (Windows: `Ctrl + ,`). In the dialog, search for `rulers`.
+- Select `Edit in settings.json`.
+- In the json file, add the following to the `editor.rulers` setting:
+
+```json
+"editor.rulers": [
+    80,
+]
+```
+
+- This will add a vertical line in the editing window at the 80th character position. (Reference: **Python Crash Course 3rd Edition** by Eric Matthes.)
+
+### VS Code Shortcuts
+
+Reference: **Python Crash Course 3rd Edition** by Eric Matthes, Appendix B.
+
+#### 1. Indenting and Unindenting Code Blocks
+
+- Indent: Highlight the entire code blocks => press: `Ctrl + ]`.
+- Unindent: Highlight the entire code blocks => press: `Ctrl + [`.
+
+#### 2. Commenting Out Code Blocks
+
+- In case that you want to disable a block of codes, highlight codes => press `Ctrl + /`.
+- Press `Ctrl + /` one more time to undo this task.
+
+#### 3. Moving Lines Up and Down
+
+- Highlight the code lines or blocks => press `Alt + up arrow` to move up and `Alt + down arrow` to move down.

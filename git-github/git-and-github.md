@@ -139,6 +139,21 @@ You've created a local Git repository, added files, and pushed them to GitHub.
 
 This section is about working with branches, changes, and merging.
 
+### Why do we need to use Branching?
+
+- Branching is a safe method to try out solutions and make mistakes without affecting the original codes. 
+- If your solutions do not work out, you can simply delete that branch and start over with another branch.
+- If you're happy with the tested solution and confident that it will not cause any issues, then you can merge your code into the `main` branch.
+
+### Naming conventions for Branches
+
+- For existing projects/repositories, check out the `CONTRIBUTING.md` file for any guidelines.
+- Good naming convention: Initials of the developer in front of each branch before a short description of code modifications (GitHub for Dummies 2ed, page 80), connecting by hyphens in between.
+- Example: John Doe is the developer.
+  - `JD-add-login-feature`.
+  - `JD-fix-data-sync-issue`.
+  - `JD-fix-payment-processing-bug`.
+
 ## Other Tips and Resources
 
 ### Cheat Sheets

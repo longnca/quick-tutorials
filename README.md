@@ -1,5 +1,7 @@
 # Quick Tutorials
 
+![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/longbytes/Quick-Tutorials)
+
 ## Introduction
 
 - This repository serves as a compilation of concise and efficient tutorials that I've acquired throughout my learning journey and professional experience.

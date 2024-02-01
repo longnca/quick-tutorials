@@ -1,6 +1,6 @@
 # Quick Tutorials
 
-![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/longbytes/Quick-Tutorials)
+![GitHub last commit](https://img.shields.io/github/last-commit/longnca/Quick-Tutorials)
 
 ## Introduction
 

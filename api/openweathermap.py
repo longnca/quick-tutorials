@@ -2,7 +2,7 @@
 
 import requests
 
-api_key = "52605dff8dc1f37394ceeca9678b0699"
+api_key = "your-api-key"
 city = "Toronto"
 url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 

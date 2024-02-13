@@ -4,8 +4,8 @@
 
 ## Introduction
 
-- This repository serves as a compilation of concise and efficient tutorials that I've acquired throughout my learning journey and professional experience.
-- Its primary objective is to streamline and expedite the execution of common tasks, which often involve multiple steps, while also providing invaluable tips to prevent errors.
+- This repository serves as a compilation of short tutorials that I've acquired throughout my learning journey and professional experience.
+- Its primary objective is to speed up the routine process of my common tasks, which often involve multiple steps, while also providing invaluable tips to prevent errors.
 - Essentially, this repository shows my personal real-life application of the **DRY** (Don't Repeat Yourself) principle.
 
 ## How to use this repo

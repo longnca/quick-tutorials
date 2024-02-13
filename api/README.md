@@ -1,0 +1,90 @@
+# APIs for Complete Beginners
+
+# Part 1: Introduction to APIs
+
+## Introduction
+
+- Briefly introduce the concept of APIs and their significance in modern software development.
+- Mention Python's popularity and suitability for working with APIs.
+- Skill requirements: Basic Python knowledge.
+
+## What is an API?
+
+API is the acronym for Application Programming Interface — an intermediary that allows two applications to talk to each other. APIs are very important for creating interconnected software applications.
+
+Analogy: API is like a waiter in a restaurant (API) taking orders (requests) from customers (users) and bringing back food (responses) from the kitchen (server).
+
+## Why Python for APIs?
+
+Simple: straightforward syntax and short learning curve are some of Python's strengths.
+Powerful libraries such as `requests`.
+Community support: Python is on the rise.
+
+## Setting up environment
+
+- Install Python
+- Create a virtual env if needed.
+
+E.g. 
+```bash
+python3 -m venv myprojectenv
+```
+
+- Install `requests`.
+
+## Make your first API call
+
+Get your hands dirty, fast! 
+
+```python
+import requests
+
+# GET request
+response = requests.get('https://jsonplaceholder.typicode.com/posts/1')
+
+# Convert the response object to a dictionary
+data = response.json()
+
+print(f"Status code: {response.status_code}")
+print(f"Complete response: {data}")
+```
+
+This code sends a GET request to the JSONPlaceholder API for a specific post and prints the response in JSON format.
+
+The code returns the (fake) information:
+```python
+Status code: 200
+Complete response: {'userId': 1, 'id': 1,
+ 'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+  'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'}
+```
+
+## Understanding API responses
+
+In the code above, the status code is 200. What does it mean?
+
+The status code indicates whether your request was successful or not, and the JSON object contains the data you requested. Common status codes include:
+
+- `200 OK`: The request was successful.
+- `404 Not Found`: The requested resource doesn't exist.
+- `401 Unauthorized`: Authentication is required or has failed.
+- `500 Internal Server Error`: An error occurred on the server side.
+
+The results are in JSON format: `{key}: {value}`. We can call the keys from the dictionary that we want, for example:
+
+```python
+print(f"The User ID is: {data['userId']}")
+```
+
+Returns: `The User ID is: 1`.
+
+## Practical example - Your turn
+
+You will have to fetch weather data from the OpenWeatherMap API.
+
+Step-by-Step Instructions:
+- Sign up for an API key from OpenWeatherMap.
+- Construct the request URL with the city name and API key. For example: Toronto ON.
+- Make the request and parse the JSON response to extract and print specific weather information.
+
+Compare your solution with mine in the end of the next section.

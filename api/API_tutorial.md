@@ -281,12 +281,39 @@ sequenceDiagram
 
 Setting up OAuth 2.0 for a Python Django web app involves several steps. We can start with popular options like Google OAuth, Facebook Login, GitHub Apps or GitHub OAuth, or we can set up our own OAuth 2.0 server using libraries like `django-oauth-toolkit`. We will go into detail in another post.
 
+## Summary & Further Reading
+
+...
 
 ## Practical exercise: Making an authenticated API request with OpenWeatherMap
 
-Get back to the same exercise in the first tutorial: fetching weather data from OpenWeatherMap. But, this time, instead of hard-coding your API key directly into your script, you will store it in an environment variable. 
+Get back to the same exercise in the first tutorial: fetching weather data from OpenWeatherMap. But, this time, instead of hard-coding your API key directly into your script, you will store it in an environment variable.
+
+There are four tasks in this exercise:
+
+### Task 1: Fetch weather data for your city
+
+Modify the provided Python script to fetch the current weather data for your own city or a city of your choice. Print out the weather description and temperature.
+
+### Task 2: Display additional weather details
+
+Extend the script to display additional weather details such as humidity, wind speed, and the maximum and minimum temperature for the day.
+
+### Task 3: Error handling
+
+Improve the script by adding error handling to manage cases when the city is not found (404 error) or when the API key is invalid (401 error). Provide a user-friendly message for each case.
+
+### Task 4: Create a simple weather CLI tool
+
+Further develop the script into a simple command-line tool that accepts the city name as an input argument and displays the weather information. For example, running python weather_cli.py Toronto should display the weather for Toronto.
 
 # Part 4: Advanced Features of the Requests Library
+
+In the previous post, we have learned the basics of `requests` library for API interactions. 
+
+In this tutorial, we will delve more into advanced features that can optimize and enhance API calls.
+
+(to be continued)
 
 # Part 5: Building and Deploying a Simple Project Using an API
 

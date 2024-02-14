@@ -79,9 +79,24 @@ You will have to fetch weather data from the OpenWeatherMap API.
 
 Step-by-Step Instructions:
 
-- Sign up for an API key from OpenWeatherMap.
+- First, you'll need to sign up for an API key from OpenWeatherMap:
+  - Visit <https://openweathermap.org/> and create an account.
+  - Navigate to the '**API keys**' tab on your account page.
+  - Generate a new API key (note this down securely).
 - Construct the request URL with the city name and API key. For example: Toronto ON.
 - Make the request and parse the JSON response to extract and print specific weather information.
+
+Your code will start like this:
+
+```python
+import requests
+
+api_key = "your-api-key"
+city = "Toronto"
+url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
+
+...
+```
 
 Check out my solution below.
 
@@ -130,7 +145,7 @@ print(data)
 
 ## Status codes
 
-When making API calls, it's crucial to handle errors and understand what different HTTP **status codes** mean. 
+As mentioned in previous post, the status code (e.g. `200 OK`) helps to indicate whether your request was successful or not. It is important for us to understand what different HTTP **status codes** mean.
 
 Use the `.status_code` parameter to check the status code of server's response. Google "HTTP status codes" for more detail.
 
@@ -140,6 +155,24 @@ Below are some common HTTP status code.
 - `401 Unauthorized`: When authentication is required and has failed or has not yet been provided..
 - `404 Not Found`: The server can't find the requested resource.
 - `500 Internal Server Error`: A generic error message, indicating something went wrong on the server's side.
+
+## Handling errors
+
+When making API calls, it's crucial to handle errors based on the status codes. For example, you can check the status code of a response and respond accordingly:
+
+```python
+import requests
+
+url = 'https://jsonplaceholder.typicode.com/posts/1'
+response = requests.get(url)
+
+if response.status_code == 200:
+  data = response.json()
+  print("Success!")
+  print(data)
+else:
+  print("Failed to retrieve data")
+```
 
 ## Exercises - Try it yourself
 
@@ -220,7 +253,11 @@ Another method of securing your API keys is to use a config file that your scrip
 
 ## OAuth 2.0
 
+### How OAuth works
+
 For a quick explanation of OAuth 2.0, please watch this video (less than 5 minutes): <https://www.youtube.com/watch?v=ZV5yTm4pT8g>.
+
+Diagram showing how OAuth works:
 
 ```mermaid
 sequenceDiagram
@@ -240,7 +277,14 @@ sequenceDiagram
     R-->>C: Serve requested resources
 ```
 
+### How to use OAuth 2.0 for a Python web app
+
 Setting up OAuth 2.0 for a Python Django web app involves several steps. We can start with popular options like Google OAuth, Facebook Login, GitHub Apps or GitHub OAuth, or we can set up our own OAuth 2.0 server using libraries like `django-oauth-toolkit`. We will go into detail in another post.
+
+
+## Practical exercise: Making an authenticated API request with OpenWeatherMap
+
+Get back to the same exercise in the first tutorial: fetching weather data from OpenWeatherMap. But, this time, instead of hard-coding your API key directly into your script, you will store it in an environment variable. 
 
 # Part 4: Advanced Features of the Requests Library
 

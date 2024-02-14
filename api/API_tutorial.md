@@ -63,20 +63,15 @@ Complete response: {'userId': 1, 'id': 1,
 
 In the code above, the status code is 200. What does it mean?
 
-The status code indicates whether your request was successful or not, and the JSON object contains the data you requested. Common status codes include:
+The status code indicates whether your request was successful or not, and the JSON object contains the data you requested. More details on status codes will be explained in the next part.
 
-- `200 OK`: The request was successful.
-- `404 Not Found`: The requested resource doesn't exist.
-- `401 Unauthorized`: Authentication is required or has failed.
-- `500 Internal Server Error`: An error occurred on the server side.
-
-The results are in JSON format: `{key}: {value}`. We can call the keys from the dictionary that we want, for example:
+The results are in JSON format: `{key}: {value}`. We can call the keys from the dictionary that we want. For example, the dictionary has the following key-value pair: `{userId:1}`.
 
 ```python
 print(f"The User ID is: {data['userId']}")
 ```
 
-Returns: `The User ID is: 1`.
+This code will return: `The User ID is: 1`.
 
 ## Exercises - Your turn
 
@@ -165,7 +160,87 @@ Quick question: What is the status code of the POST request? Is it 200?
 
 Check out my sample solution below.
 
-# Part 3: Authentication and Security with APIs
+# Part 3: Authentication and security with APIs
+
+## Introduction
+
+This tutorial will help to give you basics of API authentication methods and security best practices.
+
+## Understanding API Authentication
+
+When working with APIs, we often need to prove who we are before we can use them. This process is called "authentication". It's like showing our ID before entering a club.
+
+The purpose of API authentication is to ensure that only authorized people can access the resources. API authentication is important because it helps to protect sensitive data and user privacy from theft or misuse.
+
+## Types of API Authentication
+
+There are various methods of API authentication such as:
+
+- Basic authentication using username and password, also called HTTP-based authentication.
+- API key-based authentication.
+- TLS Encryption using the TLS (Transport Layer Security) protocol.
+- JWT-Based Authentication (JSON Web Tokens).
+- OAuth 2.0, used by social media platforms like Facebook. This method allows third-party applications to access user data without exposing user credentials, by using access tokens.
+- OpenID Connect (OIDC). This is considered the most advanced in this list. This method is similar to OAuth 2.0 but adding one more identity layer on top of it.
+
+Other notable authentication methods include SAML, mTLS (mutual TLS), SCIM.
+
+In this tutorials, we will look into two most common methods: API keys and OAuth.
+
+## Using API Keys securely
+
+One of the best practices of using API keys is that we should avoid hard-coding API keys, which means that you embed your API keys directly in code. When API keys are hardcoded into code, they become easily found by anyone who has access to the codebase. They can be then be stolen and misused.
+
+There are two common solutions to ensure the secure storage of API keys: using environment variables and configuration files.
+
+### Environment variables
+
+The first method is to store your API keys in environment variables and access them in your Python scripts. This way, they're not exposed if someone looks at your code.
+
+For example, suppose that you've set an environment variable named `'API_KEY'`. Here's how you call them in Python codes.
+
+```python
+import os
+import requests
+
+api_key = os.getenv('API_KEY')
+url = "https://api.example.com/data"
+
+# Add your API key in the request header
+headers = {'Authorization': f'Bearer {api_key}'}
+
+response = requests.get(url, headers=headers)
+data = response.json()
+print(data)
+```
+
+### Configuration files
+
+Another method of securing your API keys is to use a config file that your script reads from, which is not included in version control (e.g., `.gitignore` for Git).
+
+## OAuth 2.0
+
+For a quick explanation of OAuth 2.0, please watch this video (less than 5 minutes): <https://www.youtube.com/watch?v=ZV5yTm4pT8g>.
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant C as Client Application
+    participant S as Authorization Server
+    participant R as Resource Server
+
+    U->>C: Request service that needs access to resources
+    C->>U: Redirect to Authorization Server for authentication
+    U->>S: Authenticate and approve access request
+    S->>U: Redirect back to Client with an authorization code
+    U->>C: Provide authorization code to Client
+    C->>S: Exchange authorization code for access token
+    S-->>C: Provide access token
+    C->>R: Request resources with access token
+    R-->>C: Serve requested resources
+```
+
+Setting up OAuth 2.0 for a Python Django web app involves several steps. We can start with popular options like Google OAuth, Facebook Login, GitHub Apps or GitHub OAuth, or we can set up our own OAuth 2.0 server using libraries like `django-oauth-toolkit`. We will go into detail in another post.
 
 # Part 4: Advanced Features of the Requests Library
 

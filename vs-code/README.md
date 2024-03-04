@@ -28,6 +28,15 @@
 - Author: Christian Kohler.
 - Why it's good: Helps to autocomplete filenames.
 
+### Useful Extensions for Web Dev
+
+1. Prettier
+1. Emmet 
+1. Auto Rename Tag - author: Jun Han.
+1. Bracket Pair Colorizer - author: CoenraadS
+1. JavaScript (ES6) code snippets
+1. Live Server
+
 ### Other Extensions
 
 #### 1. Markdown Preview GitHub Styling

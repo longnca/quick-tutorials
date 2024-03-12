@@ -49,3 +49,27 @@ pip install numpy pandas matplotlib
 
 Replace `numpy pandas matplotlib` with the actual packages you need.
 
+## Best Practices
+
+### Dependencies
+
+- Keep a record of your project's dependencies using a `requirements.txt` file. 
+- You can generate one using `pip freeze > requirements.txt`. 
+- To install from this file, use `pip install -r requirements.txt`.
+
+### Security
+
+- Regularly update your dependencies to maintain security. 
+- Use `pip list --outdated` to find outdated packages and update them using `pip install --upgrade PackageName`.
+
+### Simplicity
+
+- Use **clear, descriptive names** for your virtual environments and maintain a separate environment for each project to avoid conflicts between dependencies.
+
+### Version Control
+
+- Use a version control system like **Git** to manage changes to your code, dependencies, and other important files.
+
+## Environment Variables
+
+- Store sensitive information like API keys in environment variables instead of hardcoding them into your scripts. Read [this doc](./environment_variables.md).
